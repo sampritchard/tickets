@@ -2,14 +2,14 @@ describe('Grid', function() {
   var Grid;
 })
 
-beforeEach(function() {
-  grid = new Grid();
-})
+  beforeEach(function() {
+    grid = new Grid();
+  })
 
-it('starts with 20 rows', function() {
-  expect(grid.rows).toEqual(20);
-})
+    it('has a width of 20 rows', function() {
+      expect(grid.gridWidth).toEqual(20);
+    })
 
-it('starts with 20 columns', function() {
-  expect(grid.columns).toEqual(20);
-})
+    it('has a width of 20 rows', function() {
+      expect(grid.gridHeight).toEqual(20);
+    })

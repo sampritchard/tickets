@@ -1,26 +1,13 @@
 function Grid() {
+  this.gridWidth = 20;
+  this.gridHeight = 20;
+  var grid = [];
 
+  for (var y = 0; y < this.gridWidth; y++) {
+    grid.push([]);
+    for(var x = 0; x < this.gridHeight; x++) {
+      grid[y].push(0);
+    }
+  }
+  console.log(grid)
 }
-
-Grid.prototype.populateGrid = function () {
-  var array = new Array(20)
-
-  for (var i = 0; i < 20; i++)
-    array[i] = new Array(20)
-
-
-  var start = 1;
-
-  for (var i = 0; i < 20; i++) {
-    for (var j = 0; j < 20; j++) {
-      array[i][j] = start;
-      start = start + 1;
-    }
-  }
-
-  for (var i = 0; i < 20; i++) {
-    for (var j = 0; j < 20; j++) {
-    console.log(array[i][j]);
-    }
-  }
-};
