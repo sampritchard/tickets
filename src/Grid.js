@@ -13,11 +13,44 @@ function Grid() {
 }
 
 Grid.prototype.enterCoordinates = function () {
-  var x = prompt("Please enter the X co-ordinate (Whole Number between 0-19)");
-  var y = prompt("Please enter the Y co-ordinate (Whole Number between 0-19)");
+  var x = prompt("Please enter the X co-ordinate (Whole Number between 1-18)");
+  var y = prompt("Please enter the Y co-ordinate (Whole Number between 1-18)");
+  console.log("Co-ordinate given: " + x, y + " -- Please see below closest available tickets:")
+  if (parseFloat(x) === 0 & parseFloat(y) === 0) {
   console.log(this.grid[parseFloat(x) + 1][parseFloat(y)] + " Distance: 1")
   console.log(this.grid[parseFloat(x)][parseFloat(y) + 1] + " Distance: 1")
-  console.log(this.grid[parseFloat(x)][parseFloat(y) + 2] + " Distance: 2")
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y) + 1] + " Distance: 2")
+  console.log(this.grid[parseFloat(x) + 2][parseFloat(y)] + " Distance: 2")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 2] + " Distance 2")
+} else if (parseFloat(x) === 0 & parseFloat(y) === 19) {
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) - 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y) - 1] + " Distance: 2")
+  console.log(this.grid[parseFloat(x) + 2][parseFloat(y)] + " Distance: 2")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) - 2] + " Distance 2")
+} else if (parseFloat(x) === 0 & parseFloat(y) <19 & parseFloat(y) >0) {
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) - 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 1] + " Distance: 1")
   console.log(this.grid[parseFloat(x) + 2][parseFloat(y)] + " Distance: 2")
   console.log(this.grid[parseFloat(x) + 1][parseFloat(y) + 1] + " Distance 2")
+} else if (parseFloat(x) === 19 & parseFloat(y) === 0) {
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) - 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) - 1][parseFloat(y) + 1] + " Distance: 2")
+  console.log(this.grid[parseFloat(x) - 2][parseFloat(y)] + " Distance: 2")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 2] + " Distance 2")
+} else if (parseFloat(x) <19 & parseFloat(x) >0 & parseFloat(y) === 0){
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) - 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 2] + " Distance: 2")
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y) + 1] + " Distance 2")
+} else {
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) + 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x)][parseFloat(y) - 1] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) - 1][parseFloat(y)] + " Distance: 1")
+  console.log(this.grid[parseFloat(x) + 1][parseFloat(y) + 1] + " Distance 2")
+}
 };
