@@ -2,10 +2,12 @@
 
 ### Instructions on use
  - Clone this repo
+ ```
  - copy file path of grid.html and paste into your browser (or run 'open grid.html in terminal')
  - Inspect the page and open the console
  - In the console, call a new grid (For example: 'grid = new Grid();')
  - In the console, call the enterCoordinates function (For example: 'grid.enterCoordinates();')
+ ```
  - Follow the details on screen
  - Results outputted in the console currently.
 
